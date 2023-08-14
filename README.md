@@ -14,7 +14,7 @@ vim config.toml # Edit the configuration to fit your needs
 
 Start the container
 ```sh
-# Make sure to start bitcoind container *before* starting this mempool container
+# Make sure to start bitcoind container *before* starting this electrs container
 docker compose up -d
 ```
 
