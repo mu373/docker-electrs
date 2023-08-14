@@ -17,9 +17,11 @@
 auth="rpcuser:rpcpassword"
 
 # The listening RPC address of bitcoind, port is usually 8332
+# Connect to bitcoind container on Docker
 daemon_rpc_addr = "bitcoind:8332"
 
 # The listening P2P address of bitcoind, port is usually 8333
+# Connect to bitcoind container on Docker
 daemon_p2p_addr = "bitcoind:8333"
 
 # Directory where the index should be stored. It should have at least 70GB of free space.
