@@ -38,3 +38,6 @@ docker logs --tail 100 container_id
 # [2023-08-14T05:37:37.995Z INFO  electrs::chain] chain updated: tip=0000000000000000001eba1320x7f2312b, height=591680
 # [2023-08-14T05:37:37.999Z INFO  electrs::index] indexing 2000 blocks: [591681..593680]
 ```
+
+## Usage
+Your electrs node should be available at https://localhost:50002 (when using SSL).
