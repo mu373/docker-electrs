@@ -8,12 +8,14 @@ services:
     volumes:
       - ./config.toml:/data/.electrs/config.toml #electrs configuration file
       - ./electrs-data:/electrs/data #electrs database
+    restart: always
     # ports:
       # Port 50001 does not have to be exposed to the host when using nginx reverse proxy for SSL connection
       # - 50001:50001 #Mainnet RPC
   nginx:
     container_name: electrs_nginx
     image: nginx:latest
+    restart: always
     ports:
         - "50002:50002"
     volumes:
