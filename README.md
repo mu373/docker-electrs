@@ -46,7 +46,7 @@ By setting your own SSL certificate, electrs can be served through SSL at port 5
 - `/nginx/nginx.conf`
     - Modified version of the default configuration file
     - This file is binded to `/etc/nginx/nginx.conf` in the container.
-    - `include /etc/nginx/conf.stream.d/*.conf` has been added to add SSL support to electrs.
+    - `include /etc/nginx/conf.stream.d/*.conf` has been added to add SSL support to electrs. (c.f. [(link)](https://serverfault.com/questions/1077988/nginx-does-not-open-specified-listen-port) )
 - `/nginx/conf.stream.d/electrs.conf`
     - Configuration file to add SSL support to electrs.
     - See the original documentation from romanz/electrs for details [(link)](https://github.com/romanz/electrs/blob/a1460ec4a90e45c863c29f66932dd91a0aea9f6f/doc/config.md#ssl-connection).
