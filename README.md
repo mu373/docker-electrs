@@ -5,8 +5,9 @@ Run [romanz/electrs](https://github.com/romanz/electrs) on Docker using `bitcoin
 - For running `bitcoind` on Docker, you can use [mu373/docker-bitcoind](https://github.com/mu373/docker-bitcoind).
 
 ## Setup
-Setup environment variables
+Setup `docker-compose.yml` and environment variables
 ```sh
+cp docker-compose-template.yml docker-compose.yml
 cp config.sample.toml config.toml
 vim config.toml # Edit the configuration to fit your needs
 ```
