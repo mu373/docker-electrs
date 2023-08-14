@@ -17,8 +17,8 @@ services:
     ports:
         - "50002:50002"
     volumes:
-        - ./nginx/nginx.conf:/etc/nginx/nginx.conf #default
-        - ./nginx/conf.stream.d/electrs.conf:/etc/nginx/conf.stream.d/electrs.conf #electrs setting
+        - ./nginx/nginx.conf:/etc/nginx/nginx.conf #default configuration file
+        - ./nginx/conf.stream.d/electrs.conf:/etc/nginx/conf.stream.d/electrs.conf #electrs configuration file
         - ./cert.crt:/nginx/cert.crt #your SSL certificate
         - ./cert.key:/nginx/cert.key #your SSL certificate key
 
