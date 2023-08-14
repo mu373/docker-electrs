@@ -39,5 +39,13 @@ docker logs --tail 100 container_id
 # [2023-08-14T05:37:37.999Z INFO  electrs::index] indexing 2000 blocks: [591681..593680]
 ```
 
+
+## SSL connection
+By setting your own SSL certificate, electrs can be served through SSL at port 50002. `nginx` is used as the reverse proxy. 
+
+- `/nginx/nginx.conf`: Modified version of the default configuration file (binded to `/etc/nginx/nginx.conf` in the container). `include /etc/nginx/conf.stream.d/*.conf` has been added to add SSL support to electrs.
+- `/nginx/conf.stream.d/electrs.conf`: Configuration file to add SSL support to electrs. See the original documentation from romanz/electrs for details: [(link)](https://github.com/romanz/electrs/blob/a1460ec4a90e45c863c29f66932dd91a0aea9f6f/doc/config.md#ssl-connection).
+- Install your SSL certificate at the root directory, or change the bind settings in `docker-compose.yml`.
+
 ## Usage
 Your electrs node should be available at https://localhost:50002 (when using SSL).
