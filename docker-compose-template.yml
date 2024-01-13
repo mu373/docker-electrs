@@ -5,7 +5,7 @@ services:
     build: 
       context: ./
       args: 
-        VERSION: "v0.10.1" #electrs version
+        VERSION: "v0.10.2" #electrs version
     image: mu373/docker-electrs
     volumes:
       - ./config.toml:/data/.electrs/config.toml #electrs configuration file
