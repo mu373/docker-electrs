@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   electrs:
     container_name: electrs
